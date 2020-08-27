@@ -1,0 +1,34 @@
+{
+  "name": "harmonic-mixing-helper",
+  "version": "0.0.1",
+  "description": "A web app to help find song suggestions for harmonic mixing.",
+  "main": "app.js",
+  "author": "Cheryl Tang <chertang3@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kokuyo3"
+  },
+  "keywords": [
+    "Spotify",
+    "DJ",
+    "Music",
+    "Harmonic",
+    "Mixing"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\" "
+  },
+  "devDependencies": {
+    "@babel/cli": "~7.10.5",
+    "@babel/core": "~7.11.4",
+    "@babel/preset-env": "~7.11.0",
+    "concurrently": "~5.3.0"
+  },
+  "dependencies": {
+    "axios": "~0.20.0",
+    "body-parser": "~1.19.0"
+  }
+}
