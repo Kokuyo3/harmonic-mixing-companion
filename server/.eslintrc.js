@@ -6,8 +6,9 @@ module.exports = {
     es2020: true,
   },
   extends: [
-    'airbnb',
+    'eslint:recommended',
     'plugin:react/recommended',
+    'airbnb',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -20,5 +21,6 @@ module.exports = {
   ],
   rules: {
     'no-unused-vars': 1,
+    'no-use-before-define': ['error', { functions: false, classes: true }],
   },
 };
