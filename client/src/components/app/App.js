@@ -1,22 +1,27 @@
 import React from 'react';
-import logo from '../images/logo.svg';
+import logo from '../images/spotify_logo.svg';
 import './App.css';
 
 function App() {
+  function handleSpotifyAuth() {
+    // api.get('/login').then(res => console.log(res));
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Login with your Spotify account to begin.
         </p>
         <a
+          // onClick={handleSpotifyAuth}
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="http://localhost:3000/login"
+          target="_self"
+          rel="external noopener noreferrer"
         >
-          Learn React
+          <button>Login with Spotify</button>
         </a>
       </header>
     </div>
