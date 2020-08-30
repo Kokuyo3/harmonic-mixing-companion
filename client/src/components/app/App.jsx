@@ -21,7 +21,7 @@ function App() {
           target="_self"
           rel="external noopener noreferrer"
         >
-          <button>Login with Spotify</button>
+          <button type="button">Login with Spotify</button>
         </a>
       </header>
     </div>

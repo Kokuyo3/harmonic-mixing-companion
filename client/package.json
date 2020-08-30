@@ -1,37 +1,31 @@
 {
-  "name": "client",
+  "name": "harmonic-mixing-helper-client",
   "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-bundle": "webpack -w -d",
+    "dev-client": "webpack-dev-server --mode=development --inline ",
+    "prod-bundle": "webpack -w -p",
+    "webpack-dev-server": "webpack-dev-server"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "author": "Cheryl Tang <chertang3@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kokuyo3/harmonic-mixing-helper"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "~4.2.4",
-    "@testing-library/react": "~9.5.0",
-    "@testing-library/user-event": "~7.2.1",
     "bootstrap": "~4.5.2",
-    "react": "^16.13.1",
+    "react": "~16.13.1",
     "react-bootstrap": "~1.3.0",
-    "react-dom": "^16.13.1",
-    "react-modal": "~3.11.2",
-    "react-scripts": "3.4.3"
+    "react-dom": "~16.13.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "~5.11.4",
+    "@testing-library/react": "~10.4.9",
+    "html-webpack-plugin": "~4.3.0"
   }
 }
