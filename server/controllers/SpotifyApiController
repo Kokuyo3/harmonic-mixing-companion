@@ -5,10 +5,15 @@ class SpotifyApiController {
   constructor() {
     this.authHeader = null;
     this.accessToken = null;
+    this.spotifyApi = null;
 
     this.authorizeApp().then((accessToken) => {
       this.setAccessToken(accessToken);
       this.setAuthHeader({ Authorization: `Bearer ${this.accessToken}` });
+      this.spotifyApi = axios.create({
+        baseURL: 'https://api.spotify.com/v1',
+        headers: this.authHeader,
+      });
 
       console.log(this.authHeader); // TODO: remove
     }).catch((error) => {
@@ -18,16 +23,34 @@ class SpotifyApiController {
 
   getTrack = async (id) => {
     try {
-      const response = await axios.get(`https://api.spotify.com/v1/tracks/${id}`, { headers: this.authHeader });
-      const data = await response.data;
+      const response = await this.spotifyApi.get(`/tracks/${id}`);
 
-      return data;
+      return await response.data;
     } catch (error) {
       this.handleHttpError(error);
 
       return null;
     }
   };
+
+  search = async (q, type = 'track', market = 'US', limit = '15') => {
+    try {
+      const response = await this.spotifyApi.get('/search', {
+        params: {
+          q,
+          type,
+          market,
+          limit,
+        },
+      });
+
+      return await response.data;
+    } catch (error) {
+      this.handleHttpError(error);
+
+      return null;
+    }
+  }
 
   authorizeApp = async () => {
     const authHeader = `Basic ${Buffer.from(`${process.env.CLIENT_ID}:${process.env.CLIENT_SECRET}`).toString('base64')}`;
