@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/spotify_logo.svg';
+import logo from '../../images/spotify_logo.svg';
 import './App.css';
 
 function App() {
