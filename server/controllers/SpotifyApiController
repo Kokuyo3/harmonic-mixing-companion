@@ -21,9 +21,9 @@ class SpotifyApiController {
     });
   }
 
-  getTrack = async (id) => {
+  getTrack = async (trackId) => {
     try {
-      const response = await this.spotifyApi.get(`/tracks/${id}`);
+      const response = await this.spotifyApi.get(`/tracks/${trackId}`);
 
       return await response.data;
     } catch (error) {
@@ -32,6 +32,25 @@ class SpotifyApiController {
       return null;
     }
   };
+
+  getTrackFeatures = async (trackId) => {
+    try {
+      const response = await this.spotifyApi.get(`/audio-features/${trackId}`);
+
+      return {
+        key: response.data.key,
+        mode: response.data.mode,
+        danceability: response.data.danceability,
+        energy: response.data.energy,
+        tempo: response.data.tempo,
+        id: response.data.id,
+      };
+    } catch (error) {
+      this.handleHttpError(error);
+
+      return null;
+    }
+  }
 
   search = async (q, type = 'track', market = 'US', limit = '15') => {
     try {
@@ -73,13 +92,13 @@ class SpotifyApiController {
     }
   };
 
-  setAccessToken(token) {
+  setAccessToken = (token) => {
     this.accessToken = token;
-  }
+  };
 
-  setAuthHeader(authHeader) {
+  setAuthHeader = (authHeader) => {
     this.authHeader = authHeader;
-  }
+  };
 
   handleHttpError = (error) => {
     if (error.response) {
