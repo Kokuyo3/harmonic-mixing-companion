@@ -19,7 +19,8 @@
   "scripts": {
     "test": "jest",
     "build": "babel src -d lib",
-    "dev": "concurrently \"cd server && npm run dev-server\" \"cd client && npm run dev-client\" "
+    "dev": "concurrently \"cd server && npm run dev-server\" \"cd client && npm run dev-client\" ",
+    "install": "concurrently \"cd server && npm install\" \"cd client && npm install\" \"npm install\" "
   },
   "eslintConfig": {
     "extends": "react-app"
