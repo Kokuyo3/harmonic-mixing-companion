@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../header/Header';
-import AppBody from '../app-body/AppBody';
+import Header from './header/Header';
+import AppMain from './app-main/AppMain';
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <React.StrictMode>
       <div className="App">
         <Header />
-        <AppBody />
+        <AppMain />
       </div>
     </React.StrictMode>
   );
