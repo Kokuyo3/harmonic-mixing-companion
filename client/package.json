@@ -18,11 +18,11 @@
     "url": "https://github.com/Kokuyo3/harmonic-mixing-helper"
   },
   "dependencies": {
+    "@reach/router": "~1.3.4",
     "bootstrap": "~4.5.2",
     "react": "~16.13.1",
     "react-bootstrap": "~1.3.0",
-    "react-dom": "~16.13.1",
-    "react-router-dom": "~5.2.0"
+    "react-dom": "~16.13.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "~5.11.4",

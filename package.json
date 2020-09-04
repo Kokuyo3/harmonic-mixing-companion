@@ -20,7 +20,7 @@
     "test": "jest",
     "build": "babel src -d lib",
     "dev": "concurrently \"cd server && npm run dev-server\" \"cd client && npm run dev-client\" ",
-    "install": "concurrently \"cd server && npm install\" \"cd client && npm install\" \"npm install\" "
+    "install": "concurrently \"cd server && npm install\" \"cd client && npm install\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,6 +28,8 @@
   "devDependencies": {
     "@babel/cli": "~7.10.5",
     "@babel/core": "~7.11.4",
+    "@babel/plugin-proposal-class-properties": "~7.10.4",
+    "@babel/plugin-transform-arrow-functions": "~7.10.4",
     "@babel/preset-env": "~7.11.0",
     "babel-eslint": "~10.1.0",
     "babel-jest": "~26.3.0",
