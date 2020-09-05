@@ -1,10 +1,12 @@
 body {
-  text-align: center;
-  height: auto;
   min-height: 100%;
   background-color: #282c34;
 }
 
-.App-link {
+.app-link {
   color: #61dafb;
+}
+
+.app-body {
+  display: flex;
 }
