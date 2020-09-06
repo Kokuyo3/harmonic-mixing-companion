@@ -22,9 +22,14 @@
     pointer-events: none;
 }
 
+/*
+  animation-duration: 1 common time measure at 128bpm
+  duration of 1 measure = (4 beats * 60s) / (128 bpm)
+*/
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
-        animation: App-logo-spin infinite 5s linear;
+        animation: App-logo-spin infinite linear;
+        animation-duration: 1875ms;
     }
 }
 
