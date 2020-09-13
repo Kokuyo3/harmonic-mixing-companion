@@ -16,7 +16,7 @@ function Search() {
     if (value.trim().length > 0) {
       api.get(`/api/search?q=${value.trim()}`)
         .then(({ data }) => {
-          dispatch(setResults(data.tracks));
+          dispatch(setResults(data));
         }).catch((err) => {
           console.log(err);
         });
