@@ -1,5 +1,5 @@
 {
-  "name": "harmonic-mixing-helper-client",
+  "name": "harmonic-mixing-companion-client",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kokuyo3/harmonic-mixing-helper"
+    "url": "https://github.com/Kokuyo3/harmonic-mixing-companion"
   },
   "dependencies": {
     "@reach/router": "~1.3.4",
