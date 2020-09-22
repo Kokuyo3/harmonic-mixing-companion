@@ -12,7 +12,7 @@ function Tracklist() {
   if (tracks !== undefined) {
     renderedTracks = tracks.map((track) => (
       <div className="tracklist__row">
-        <span>{`${tracks.indexOf(track)} - `}</span>
+        <span>{`${tracks.indexOf(track) + 1} - `}</span>
         <Track key={track.id} track={track} showAddButton={false} />
       </div>
     ));
