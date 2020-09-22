@@ -1,12 +1,13 @@
-body {
-  min-height: 100%;
-  background-color: #282c34;
+html, body {
+    height: 100%;
+    background-color: #282c34;
 }
 
 .app-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 .app-body {
-  display: flex;
+    display: flex;
+    min-height: 100%;
 }

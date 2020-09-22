@@ -1,42 +1,39 @@
-.Search-area {
-    color: white;
-}
-
-.search-form {
-    display: inline-block;
+#search-form {
+    display: flex;
 }
 
 input[type=text] {
-    width: 80%;
-    padding: 6px;
     font-size: 16px;
+    flex: auto;
+    width: auto;
+    padding: 6px;
     border: 1px solid #ccc;
 }
 
 #search-form button {
+    font-size: 17px;
     width: auto;
     padding: 6px;
-    background: #ddd;
-    font-size: 17px;
     border: none;
+    background: #ddd;
 }
 
 .invalid-search-alert {
-    padding: 12px;
-    background-color: #f44336;
-    color: white;
     font-size: large;
+    padding: 12px;
+    color: white;
+    background-color: #f44336;
 }
 
 .closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
     font-size: 22px;
+    font-weight: bold;
     line-height: 15px;
+    float: right;
+    margin-left: 15px;
     cursor: pointer;
     transition: 0.3s;
+    color: white;
 }
 
 .closebtn:hover {

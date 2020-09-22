@@ -1,6 +1,7 @@
 import React from 'react';
-import './Header.css';
+
 import logo from '../../../images/spotify_logo.svg';
+import './Header.css';
 
 function Header() {
   return (

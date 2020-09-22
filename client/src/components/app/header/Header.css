@@ -1,24 +1,24 @@
 .header {
-    min-height: 3vh;
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    height: 3.5vh;
     background-color: #32383e;
 }
 
 .nav-link {
-    margin: 0px 8px 0px 16px;
-    font-size: calc(11px + 1vmin);
+    font-size: calc(10px + 1vmin);
     font-weight: 550;
+    line-height: 40px;
+    margin: 0 8px 0 16px;
     text-decoration: none;
     color: white;
-    line-height: 40px;
 }
 
 .App-logo {
-    height: 4.5vmin;
-    margin: 6px 0px 6px 16px;
+    height: 3vh;
+    margin: 6px 0 6px 16px;
     pointer-events: none;
 }
 

@@ -1,3 +1,6 @@
 main {
-    margin-left: 65%;
+    display: flex;
+    overflow-y: auto;
+    width: 65vw;
+    height: 96.5vh;
 }
