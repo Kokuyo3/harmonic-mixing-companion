@@ -1,4 +1,4 @@
-.song-card {
+.track-card {
     display: flex;
     width: 33vw;
     height: 6rem;
@@ -7,13 +7,13 @@
     background-color: #eee;
 }
 
-.song-card::after {
+.track-card::after {
     display: table;
     clear: both;
     content: "";
 }
 
-.song-card img {
+.track-card img {
     width: 6em;
     height: 6em;
     margin-right: 5px;
@@ -21,7 +21,7 @@
     border-bottom-left-radius: 14px;
 }
 
-.song-card__add-btn, .song-card__remove-btn {
+.track-card__add-btn, .track-card__remove-btn {
     font-size: 2.5em;
     font-weight: bolder;
     align-self: center;
@@ -33,52 +33,52 @@
     border-bottom-right-radius: 14px;
 }
 
-.song-card__add-btn:hover {
+.track-card__add-btn:hover {
     color: green;
 }
 
-.song-card__remove-btn:hover {
+.track-card__remove-btn:hover {
     color: red;
 }
 
 /* Add media queries for responsiveness. This will center both the text and the image inside the container */
 @media (max-width: 500px) {
-    .song-card {
+    .track-card {
         text-align: center;
     }
 
-    .song-card img {
+    .track-card img {
         display: block;
         float: none;
         margin: auto;
     }
 }
 
-.song-card__details {
+.track-card__details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: inherit;
 }
 
-.song-card__details--artists {
+.track-card__details--artists {
     font-size: 0.85em;
     margin-top: auto;
 }
 
-.song-card__details--song-name {
+.track-card__details--track-name {
     font-size: 1.1em;
     font-weight: 500;
     margin-bottom: auto;
 }
 
-.song-card__details--features {
+.track-card__details--features {
     font-size: 0.9em;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.song-card__details--features span {
+.track-card__details--features span {
     padding: 6px 15px;
     border: 2px solid #737373;
 }

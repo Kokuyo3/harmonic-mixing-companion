@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import api from '../../../../util/api';
-import { setResults } from '../../../../redux/songsSlice';
+import { setResults } from '../../../../redux/tracksSlice';
 import './Search.css';
 
 function Search() {

@@ -3,24 +3,24 @@ import { useSelector } from 'react-redux';
 
 import './Tracklist.css';
 
-import Song from '../../sidebar/songs-table/song/Song';
+import Track from '../../sidebar/search-results/track/Track';
 
 function Tracklist() {
-  let renderedSongs = null;
-  const songs = useSelector((state) => state.songs.tracklist);
+  let renderedTracks = null;
+  const tracks = useSelector((state) => state.tracks.tracklist);
 
-  if (songs !== undefined) {
-    renderedSongs = songs.map((song) => (
+  if (tracks !== undefined) {
+    renderedTracks = tracks.map((track) => (
       <div className="tracklist__row">
-        <span>{`${songs.indexOf(song)} - `}</span>
-        <Song key={song.id} song={song} showAddButton={false} />
+        <span>{`${tracks.indexOf(track)} - `}</span>
+        <Track key={track.id} track={track} showAddButton={false} />
       </div>
     ));
   }
 
   return (
     <div className="tracklist">
-      {renderedSongs}
+      {renderedTracks}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 {
   "name": "harmonic-mixing-companion",
   "version": "0.0.1",
-  "description": "A web app to help find song suggestions for harmonic mixing.",
+  "description": "A web app to help find track suggestions for harmonic mixing.",
   "main": "app.js",
   "author": "Cheryl Tang <chertang3@gmail.com>",
   "license": "MIT",

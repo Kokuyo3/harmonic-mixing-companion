@@ -3,8 +3,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import api from '../util/api';
 
-export const songsSlice = createSlice({
-  name: 'songs',
+export const tracksSlice = createSlice({
+  name: 'tracks',
   initialState: {
     results: {},
     tracklist: [],
@@ -22,9 +22,9 @@ export const songsSlice = createSlice({
   },
 });
 
-export const { setResults, addToTracklist, removeFromTracklist } = songsSlice.actions;
+export const { setResults, addToTracklist, removeFromTracklist } = tracksSlice.actions;
 
-export default songsSlice.reducer;
+export default tracksSlice.reducer;
 
 const search = (query) => async (dispatch, getState) => {
   try {

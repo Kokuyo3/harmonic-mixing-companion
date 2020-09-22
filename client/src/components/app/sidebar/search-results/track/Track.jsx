@@ -2,39 +2,39 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
-import { addToTracklist, removeFromTracklist } from '../../../../../redux/songsSlice';
-import './Song.css';
+import { addToTracklist, removeFromTracklist } from '../../../../../redux/tracksSlice';
+import './Track.css';
 
-function Song({ song, showAddButton }) {
+function Track({ track, showAddButton }) {
   const dispatch = useDispatch();
 
   const handleAddButtonClick = () => {
-    dispatch(addToTracklist(song));
+    dispatch(addToTracklist(track));
   };
   const handleRemoveButtonClick = () => {
-    dispatch(removeFromTracklist(song));
+    dispatch(removeFromTracklist(track));
   };
 
-  const artists = song.artists.map((artist) => artist.name);
+  const artists = track.artists.map((artist) => artist.name);
 
   return (
-    <div className="song-card">
-      <img src={song.albumArtUrl} alt="Song Art" />
-      <div className="song-card__details">
-        <div className="song-card__details--artists">
+    <div className="track-card">
+      <img src={track.albumArtUrl} alt="Track Art" />
+      <div className="track-card__details">
+        <div className="track-card__details--artists">
           {artists.join(', ')}
         </div>
-        <div className="song-card__details--song-name">
-          {song.name}
+        <div className="track-card__details--track-name">
+          {track.name}
         </div>
-        <div className="song-card__details--features">
-          <span className="bpm">{`${Math.round(song.features.tempo)} BPM`}</span>
-          <span className="song-key">{pitchClassToTonal(song.features.key, song.features.mode)}</span>
+        <div className="track-card__details--features">
+          <span className="bpm">{`${Math.round(track.features.tempo)} BPM`}</span>
+          <span className="track-key">{pitchClassToTonal(track.features.key, track.features.mode)}</span>
         </div>
       </div>
       {showAddButton
-        ? <button className="song-card__add-btn" type="button" onClick={handleAddButtonClick}>+</button>
-        : <button className="song-card__remove-btn" type="button" onClick={handleRemoveButtonClick}>X</button>}
+        ? <button className="track-card__add-btn" type="button" onClick={handleAddButtonClick}>+</button>
+        : <button className="track-card__remove-btn" type="button" onClick={handleRemoveButtonClick}>X</button>}
     </div>
   );
 }
@@ -86,9 +86,9 @@ function pitchClassToTonal(key, mode) {
   return mode === 1 ? `${tonalKey} maj` : `${tonalKey} min`;
 }
 
-Song.propTypes = {
+Track.propTypes = {
   showAddButton: PropTypes.bool.isRequired,
-  song: PropTypes.shape({
+  track: PropTypes.shape({
     albumId: PropTypes.string.isRequired,
     albumArtUrl: PropTypes.string.isRequired,
     albumName: PropTypes.string.isRequired,
@@ -103,4 +103,4 @@ Song.propTypes = {
   }).isRequired,
 };
 
-export default Song;
+export default Track;
