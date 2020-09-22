@@ -1,0 +1,11 @@
+.tracklist {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    margin-left: 3vw;
+}
+
+.tracklist__row {
+    display: flex;
+    align-items: center;
+}
