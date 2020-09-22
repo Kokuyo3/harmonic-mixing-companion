@@ -7,22 +7,22 @@ export const songsSlice = createSlice({
   name: 'songs',
   initialState: {
     results: {},
-    selections: [],
+    tracklist: [],
   },
   reducers: {
     setResults: (state, action) => {
       state.results = action.payload;
     },
-    addSelection: (state, action) => {
-      state.selections.push(action.payload);
+    addToTracklist: (state, action) => {
+      state.tracklist.push(action.payload);
     },
-    removeSelection: (state, action) => {
-      state.selections.splice(action.payload, 1);
+    removeFromTracklist: (state, action) => {
+      state.tracklist = state.tracklist.filter((track) => track.id !== action.payload.id);
     },
   },
 });
 
-export const { setResults, addSelection, removeSelection } = songsSlice.actions;
+export const { setResults, addToTracklist, removeFromTracklist } = songsSlice.actions;
 
 export default songsSlice.reducer;
 
