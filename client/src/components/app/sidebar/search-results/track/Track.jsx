@@ -5,14 +5,14 @@ import { useDispatch } from 'react-redux';
 import { addToTracklist, removeFromTracklist } from '../../../../../redux/tracksSlice';
 import './Track.css';
 
-function Track({ position, track, showAddButton }) {
+function Track({ index, track, showAddButton }) {
   const dispatch = useDispatch();
 
   const handleAddButtonClick = () => {
     dispatch(addToTracklist(track));
   };
   const handleRemoveButtonClick = () => {
-    dispatch(removeFromTracklist(position));
+    dispatch(removeFromTracklist(index));
   };
 
   const artists = track.artists.map((artist) => artist.name);
@@ -87,7 +87,7 @@ function pitchClassToTonal(key, mode) {
 }
 
 Track.propTypes = {
-  position: PropTypes.number,
+  index: PropTypes.number,
   showAddButton: PropTypes.bool.isRequired,
   track: PropTypes.shape({
     albumId: PropTypes.string.isRequired,
@@ -105,7 +105,7 @@ Track.propTypes = {
 };
 
 Track.defaultProps = {
-  position: null,
+  index: null,
 };
 
 export default Track;

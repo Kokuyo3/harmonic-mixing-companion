@@ -1,7 +1,13 @@
 /* eslint-disable no-param-reassign */
 
 import { createSlice } from '@reduxjs/toolkit';
-import api from '../util/api';
+
+const swapArrayElements = (array, indexA, indexB) => {
+  const temp = array[indexA];
+
+  array[indexA] = array[indexB];
+  array[indexB] = temp;
+};
 
 export const tracksSlice = createSlice({
   name: 'tracks',
@@ -21,19 +27,25 @@ export const tracksSlice = createSlice({
         state.tracklist.indexOf(track) !== action.payload
       ));
     },
+    moveTrackUp: (state, action) => {
+      const index = action.payload;
+
+      if (index !== 0) {
+        swapArrayElements(state.tracklist, index, index - 1);
+      }
+    },
+    moveTrackDown: (state, action) => {
+      const index = action.payload;
+
+      if (index !== state.tracklist.length - 1) {
+        swapArrayElements(state.tracklist, index, index + 1);
+      }
+    },
   },
 });
 
-export const { setResults, addToTracklist, removeFromTracklist } = tracksSlice.actions;
+export const {
+  setResults, addToTracklist, removeFromTracklist, moveTrackUp, moveTrackDown,
+} = tracksSlice.actions;
 
 export default tracksSlice.reducer;
-
-const search = (query) => async (dispatch, getState) => {
-  try {
-    const results = await api.get(`/api/search?q=${query}`);
-
-    dispatch(setResults(results));
-  } catch (err) {
-    console.log(err);
-  }
-};

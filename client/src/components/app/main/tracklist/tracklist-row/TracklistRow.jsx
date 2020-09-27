@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import TrackButtonGroup from '../button-group/TrackButtonGroup';
+
 import Track from '../../../sidebar/search-results/track/Track';
+import TrackButtonGroup from '../button-group/TrackButtonGroup';
 
 function TracklistRow({ track, index }) {
   const [isShown, setIsShown] = useState(false);
@@ -13,8 +14,8 @@ function TracklistRow({ track, index }) {
       onMouseLeave={() => setIsShown(false)}
     >
       <span>{`${index + 1} - `}</span>
-      {isShown && <TrackButtonGroup className="tracklist__row_button-group" />}
-      <Track position={index} track={track} showAddButton={false} />
+      {isShown && <TrackButtonGroup className="tracklist__row_button-group" index={index} />}
+      <Track index={index} track={track} showAddButton={false} />
     </div>
   );
 }
