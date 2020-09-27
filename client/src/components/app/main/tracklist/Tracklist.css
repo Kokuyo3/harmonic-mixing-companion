@@ -9,3 +9,11 @@
     display: flex;
     align-items: center;
 }
+
+.tracklist__row_button-group {
+    display: none;
+}
+
+.tracklist__row:hover, .tracklist__row_button-group {
+    display: inline-flex;
+}

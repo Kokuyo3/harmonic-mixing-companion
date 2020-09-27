@@ -29,6 +29,7 @@
     margin-left: auto;
     color: #7b858f;
     border: none;
+    outline: none;
     border-top-right-radius: 14px;
     border-bottom-right-radius: 14px;
 }
