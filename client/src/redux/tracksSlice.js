@@ -17,7 +17,9 @@ export const tracksSlice = createSlice({
       state.tracklist.push(action.payload);
     },
     removeFromTracklist: (state, action) => {
-      state.tracklist = state.tracklist.filter((track) => track.id !== action.payload.id);
+      state.tracklist = state.tracklist.filter((track) => (
+        state.tracklist.indexOf(track) !== action.payload
+      ));
     },
   },
 });

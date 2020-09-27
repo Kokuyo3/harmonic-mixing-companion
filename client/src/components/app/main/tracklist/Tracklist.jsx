@@ -11,7 +11,8 @@ function Tracklist() {
 
   if (tracks !== undefined) {
     renderedTracks = tracks.map((track, index) => (
-      <TracklistRow key={track.id} track={track} index={index} />
+      // eslint-disable-next-line react/no-array-index-key
+      <TracklistRow key={`${index}-${track.id}`} track={track} index={index} />
     ));
   }
 

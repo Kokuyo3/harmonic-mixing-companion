@@ -12,7 +12,7 @@ function Track({ position, track, showAddButton }) {
     dispatch(addToTracklist(track));
   };
   const handleRemoveButtonClick = () => {
-    dispatch(removeFromTracklist(track, position));
+    dispatch(removeFromTracklist(position));
   };
 
   const artists = track.artists.map((artist) => artist.name);
