@@ -20,6 +20,10 @@ function TrackButtonGroup({ index }) {
     dispatch(moveTrackDown(index));
   };
 
+  const handleSearchTrackButtonClick = () => {
+    // TODO
+  };
+
   return (
     <ButtonGroup
       orientation="vertical"
@@ -30,7 +34,7 @@ function TrackButtonGroup({ index }) {
       <Button aria-label="move track up" onClick={handleUpButtonClick}>
         <KeyboardArrowUpRoundedIcon />
       </Button>
-      <Button aria-label="search using this track">
+      <Button aria-label="search using this track" onClick={handleSearchTrackButtonClick}>
         <YoutubeSearchedForRoundedIcon />
       </Button>
       <Button aria-label="move track down" onClick={handleDownButtonClick}>

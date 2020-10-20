@@ -8,9 +8,10 @@
     "url": "https://github.com/Kokuyo3/harmonic-mixing-companion"
   },
   "private": true,
+  "main": "wwww.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "dev-server": "nodemon --exec babel-node ./bin/www --ignore dist/"
+    "start": "node bin/www.js",
+    "dev-server": "nodemon --exec babel-node --harmony-top-level-await bin/www.js --ignore dist/"
   },
   "nodemonConfig": {
     "ignore": [
@@ -19,14 +20,27 @@
     "delay": 2500
   },
   "devDependencies": {
-    "nodemon": "~2.0.4"
+    "@babel/cli": "~7.12.1",
+    "@babel/core": "~7.12.1",
+    "@babel/eslint-parser": "~7.12.1",
+    "@babel/node": "~7.12.1",
+    "@babel/plugin-proposal-class-properties": "~7.12.1",
+    "@babel/plugin-syntax-top-level-await": "~7.12.1",
+    "@babel/plugin-transform-arrow-functions": "~7.12.1",
+    "@babel/plugin-transform-runtime": "~7.12.1",
+    "@babel/preset-env": "~7.12.1",
+    "@babel/preset-react": "~7.12.1",
+    "babel-loader": "~8.1.0",
+    "nodemon": "~2.0.5"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
+    "axios": "~0.20.0",
+    "axios-auth-refresh": "~3.0.0",
+    "cookie-parser": "~1.4.5",
     "cors": "~2.8.5",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1",
+    "debug": "~4.2.0",
+    "dotenv": "~8.2.0",
+    "express": "~4.17.1",
     "querystring": "~0.2.0"
   }
 }

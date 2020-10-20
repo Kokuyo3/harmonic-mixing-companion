@@ -30,7 +30,13 @@ module.exports = {
             presets: [
               '@babel/preset-env',
               '@babel/preset-react',
-              { plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-arrow-functions'] }],
+              {
+                plugins: [
+                  '@babel/plugin-proposal-class-properties',
+                  '@babel/plugin-transform-arrow-functions',
+                  '@babel/plugin-transform-runtime',
+                  '@babel/plugin-syntax-top-level-await'],
+              }],
           },
         },
       },
