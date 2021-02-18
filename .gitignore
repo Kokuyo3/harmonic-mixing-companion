@@ -16,6 +16,23 @@ pids
 jspm_packages/
 /.pnp
 .pnp.js
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Spring
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
 # Coverage directory used by tools like istanbul
 coverage
@@ -58,7 +75,13 @@ typings/
 .env.development.local
 .env.test.local
 .env.production.local
+HELP.md
 
 # IntelliJ
-.idea/
+.idea
+*.iws
 *.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
