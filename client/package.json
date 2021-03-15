@@ -1,9 +1,22 @@
 {
   "name": "harmonic-mixing-companion-client",
   "version": "0.0.1",
-  "description": "",
+  "description": "A web app to help find song suggestions for harmonic mixing.",
   "main": "index.js",
   "private": true,
+  "author": "Cheryl Tang <chertang3@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kokuyo3/harmonic-mixing-companion"
+  },
+  "keywords": [
+    "Spotify",
+    "DJ",
+    "Music",
+    "Harmonic",
+    "Mixing"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-bundle": "webpack -w -d",
@@ -11,15 +24,13 @@
     "prod-bundle": "webpack -w -p",
     "webpack-dev-server": "webpack-dev-server"
   },
-  "author": "Cheryl Tang <chertang3@gmail.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Kokuyo3/harmonic-mixing-companion"
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "dependencies": {
     "@reach/router": "~1.3.4",
     "@reduxjs/toolkit": "~1.4.0",
+    "axios": "~0.21.1",
     "bootstrap": "~4.5.2",
     "prop-types": "~15.7.2",
     "react": "~16.13.1",
@@ -28,9 +39,35 @@
     "react-redux": "~7.2.1"
   },
   "devDependencies": {
+    "@babel/cli": "~7.10.5",
+    "@babel/core": "~7.11.4",
+    "@babel/node": "~7.10.5",
+    "@babel/plugin-proposal-class-properties": "~7.10.4",
+    "@babel/plugin-transform-arrow-functions": "~7.10.4",
+    "@babel/plugin-transform-runtime": "~7.11.5",
+    "@babel/preset-env": "~7.11.0",
+    "@babel/preset-react": "~7.10.4",
     "@testing-library/jest-dom": "~5.11.4",
     "@testing-library/react": "~10.4.9",
+    "babel-eslint": "~10.1.0",
+    "babel-jest": "~26.3.0",
+    "babel-loader": "~8.1.0",
+    "css-loader": "~4.2.2",
+    "eslint": "~7.7.0",
+    "eslint-config-airbnb": "~18.2.0",
+    "eslint-plugin-import": "~2.22.0",
+    "eslint-plugin-jsx-a11y": "~6.3.1",
+    "eslint-plugin-react": "~7.20.6",
+    "eslint-plugin-react-hooks": "~4.1.0",
+    "file-loader": "~6.0.0",
     "html-webpack-plugin": "~4.3.0",
-    "redux-devtools": "~3.6.1"
+    "jest": "~26.4.2",
+    "react-test-renderer": "~16.13.1",
+    "redux-devtools": "~3.6.1",
+    "style-loader": "~1.2.1",
+    "svg-url-loader": "~6.0.0",
+    "webpack": "~4.44.1",
+    "webpack-cli": "~3.3.12",
+    "webpack-dev-server": "~3.11.0"
   }
 }
