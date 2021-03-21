@@ -1,10 +1,8 @@
 aside {
-    height: 100%;
-    min-width: 35%;
-    position: fixed;
-    background-color: #306236;
-    display: block;
-    padding: 1px 0px;
     overflow-y: auto;
     box-sizing: border-box;
+    width: 35vw;
+    height: 96.5vh;
+    padding: 1px 0;
+    background-color: #306236;
 }
